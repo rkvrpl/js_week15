@@ -139,25 +139,16 @@ while(num2 >= 1){
 //Задание 19
 // Проверьте, все ли элементы массива являются положительными числами используя цикл while
 // Подсказка: используйте директиву break
+{
 const allNumbers = [1, 2, 3, -4, 5];
 let allPositive = true;
-// let i = 0;
-// while(allNumbers[i]%2===0){
-//     console.log(allNumbers[i]);
-//     i += 1;
-// }
-
-
-// //Пример того, как возвести каждый элемент цикла в квадрат
-
-// const numbers = [1, 2, 3, 4, 5]
-// let i = 0
-// while (i < numbers.length) {
-//   const currentElement = numbers[i]
-//   console.log(currentElement * currentElement)
-//   i++
-// }
-// // напечатает 1, 4, 9, 16, 25
+let i = 0;
+while(allNumbers[i]>0){
+        console.log(allPositive);
+        i +=1;
+        // break; он тут не нужен, цикл же выполняется до тех пор пока не встретит отрицательное число
+}
+}
 
 
 //Задание 20
@@ -183,22 +174,23 @@ do{
 //Задание 22
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
 
-// {
-//     // do{
-//         //     let num = prompt("Введите число:");
-//         //     console.log(num);
-//         //     sum = sum + parseInt(num);
-//         //     console.log(sum);
-//         // }while(sum >= 100)
+{
+    // let sum = 0;
+    // let num;
+    // do{
+    //     num = prompt("Введите число:");
+    //     console.log(num);
+    //     sum = sum + parseInt(num);
+    //     console.log(sum);
+    // }while(sum >= 100)
 
-    
-//     while(sum >= 100){
-//     let sum = prompt("Введите число:");
-//     console.log(sum);
-//     sum = parseInt(sum) + parseInt(sum);
-//     console.log(sum);
-//     }
-// }
+    // let sum = 0;
+    // while(sum = prompt("Введите число:")){
+    // console.log(sum);
+    // sum = parseInt(sum) + parseInt(sum);
+    // console.log(sum);
+    // }
+}
 
 
 //Задание 23
@@ -216,10 +208,10 @@ const getBlueTitle = () =>{
 //Задание 24
 // Напишите генератор случайных строк до 6 символов
 // Подсказка: используйте методы объекта Math и длину массива alphabet
-// let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
-// let randomString = '';
-// while(randomString.lenght = 6){
-//  ;
-// randomString += Math.floor(Math.random() * alphabet.length);
-// }
-// console.log(randomString);
+let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+let randomString = '';
+while(randomString.length < 6){
+    const index = Math.floor(Math.random() * alphabet.length);
+    randomString += alphabet[index];
+}
+console.log(randomString);

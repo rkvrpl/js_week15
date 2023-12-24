@@ -175,35 +175,25 @@ do{
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
 
 {
-    // let sum = 0;
-    // let num;
-    // do{
-    //     num = prompt("Введите число:");
-    //     console.log(num);
-    //     sum = sum + parseInt(num);
-    //     console.log(sum);
-    // }while(sum >= 100)
-
-    // let sum = 0;
-    // while(sum = prompt("Введите число:")){
-    // console.log(sum);
-    // sum = parseInt(sum) + parseInt(sum);
-    // console.log(sum);
-    // }
+    let sum = 0;
+    do{
+        let num = prompt("Введите число:");
+        console.log(num);
+        sum += Number(num);
+        console.log(sum);
+    }while(sum <= 100)
 }
 
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
+const title = document.querySelectorAll('h4');
 const getBlueTitle = () =>{
-    const title = document.querySelectorAll('h4');
-    for(let i = 0; i <= title.length; i++){
-    title[i].style.color = '#00f';
+    for(let item of title){
+    item.style.backgroundColor = '#00f';
     }
 }
-// код работает, но выходит ошибка Cannot read properties of undefined (reading 'style'), что это значит
-
-
+getBlueTitle();
 
 //Задание 24
 // Напишите генератор случайных строк до 6 символов
